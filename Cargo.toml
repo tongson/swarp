@@ -7,4 +7,3 @@ edition = "2018"
 [dependencies]
 tokio = { version = "0.2", features = ["full"] }
 warp = "0.2.5"
-log = "0.4"
