@@ -1,19 +1,16 @@
-# warp-cwd
-Serve cwd through warp.rs
-
 # swarp
 Most leet static web server courtesy of warp.rs.
 
-*s* can be static
-*s* can be small
-*s* can be secure
-*s* can be super
+_s_ can be static <br/>
+_s_ can be small <br/>
+_s_ can be secure <br/>
+_s_ can be super <br/>
 
-Yes this is *s*illy.
+Yes this is _s_illy.<br/>
 
 # USAGE
 Configured through environment variables
 
-SWARP_BIND: IP to bind to default: 127.0.0.1
-SWARP_PORT: Port to listen from: 3030
-SWARP_CWD: Directory to serve
+`SWARP_BIND`: IP to bind to default: 127.0.0.1 <br/>
+`SWARP_PORT`: Port to listen from: 3030 <br/>
+`SWARP_CWD`: Directory to serve <br/>
