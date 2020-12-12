@@ -1,11 +1,13 @@
 #![deny(warnings)]
 use std::env;
+use std::net::IpAddr;
 
 #[tokio::main]
 async fn main() {
-  let d = env::args().nth(1).unwrap_or(".".to_string());
-  let p: u16 = env::args().nth(2).unwrap_or("3030".to_string()).parse::<u16>().unwrap();
-  warp::serve(warp::fs::dir(d))
-    .run(([127, 0, 0, 1], p))
+  let bind = env::var("BIND").unwrap_or("127.0.0.1".to_string());
+  let port = env::var("PORT").unwrap_or("3030".to_string()).parse::<u16>().unwrap();
+  let cwd = env::var("CWD").unwrap_or(".".to_string());
+  warp::serve(warp::fs::dir(cwd))
+    .run((bind.parse::<IpAddr>().unwrap(), port))
     .await;
 }
