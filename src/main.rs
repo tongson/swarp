@@ -8,6 +8,9 @@ async fn main() {
   let port = env::var("SWARP_PORT").unwrap_or("3030".to_string());
   let cwd = env::var("SWARP_CWD").unwrap_or(".".to_string());
   warp::serve(warp::fs::dir(cwd))
-    .run((bind.parse::<IpAddr>().unwrap(), port.parse::<u16>().unwrap()))
+    .run((
+      bind.parse::<IpAddr>().unwrap(),
+      port.parse::<u16>().unwrap(),
+    ))
     .await;
 }
