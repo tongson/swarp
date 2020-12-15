@@ -6,7 +6,7 @@ Most leet static web server courtesy of warp.rs.
 **s** can be secure <br/>
 **s** can be super <br/>
 
-Yes this is **s**illy.<br/>
+Yes, this is **s**illy.<br/>
 
 # USAGE
 Configured through environment variables
